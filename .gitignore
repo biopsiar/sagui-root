@@ -2,6 +2,9 @@
 #para manter o desenvolvimento separado
 sagui-*/
 
+#ignorando alterações na base de dados
+mongo/
+
 # Logs
 logs
 *.log
