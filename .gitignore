@@ -1,3 +1,7 @@
+#repositorios individuais do sagui
+#para manter o desenvolvimento separado
+sagui-*/
+
 # Logs
 logs
 *.log

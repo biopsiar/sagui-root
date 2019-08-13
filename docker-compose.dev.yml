@@ -1,0 +1,43 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx/Dockerfile.dev
+    image: sagui-nginx
+    expose:
+      - '80'
+    ports:
+      - '80:80'
+    links: # Link services to access http://app and  http://api inside the container
+      - api:api
+      - app:app
+  app:
+    build: ./app/Dockerfile.dev
+    image: sagui-app
+    #environment:
+      #- NODE_ENV=development
+    volumes: # For webpack dev server to use our local files
+      - ./sagui-app:/usr/src/app
+    ports:
+      - '8080:8080' # For docker to now where to redirect HMR queries
+  api:
+    build: ./api/Dockerfile.dev
+    image: sagui-api
+    environment:
+      - DB_NAME=sagui
+      - DB_USER=sagui
+      - DB_PASSWORD=sagui
+      - DB_HOST="db"
+      - DB_PORT=5432
+      #- NODE_ENV=development
+    links:
+      - db:db
+    volumes:
+      - ./sagui-api:/usr/src/api
+    ports:
+      - '5000'
+     depends_on:
+       - "db"
+  db: # name of the third service
+    image: mongo # specify image to build container from
+    ports:
+    - "27017:27017" # specify port forwarding
