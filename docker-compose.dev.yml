@@ -4,7 +4,9 @@ services:
   ## nginx
   #############
   nginx:
-    build: ./nginx/Dockerfile.dev
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.dev
     image: sagui-nginx
     expose:
       - '80'
@@ -20,12 +22,14 @@ services:
   ## vuejs spa
   #############
   app:
-    build: ./sagui-app/Dockerfile.dev
+    build:
+      context: ./sagui-app
+      dockerfile: Dockerfile.dev
     image: sagui-app
     #environment:
       #- NODE_ENV=development
     volumes: # For webpack dev server to use our local files
-      - ./sagui-app:/usr/src/app
+      - ./sagui-app:/app
     ports:
       - '8080:8080' # For docker to now where to redirect HMR queries
 
@@ -33,7 +37,9 @@ services:
   ## flask api
   #############
   api:
-    build: ./sagui-api/Dockerfile.dev
+    build:
+      context: ./sagui-api
+      dockerfile: Dockerfile.dev
     image: sagui-api
     environment:
       - DB_NAME=sagui
@@ -45,11 +51,11 @@ services:
     links:
       - db:db
     volumes:
-      - ./sagui-api:/usr/src/api
+      - ./sagui-api:/app
     ports:
       - '5000'
-     depends_on:
-       - "db"
+    depends_on:
+      - "db"
 
   #############
   ## mongo
