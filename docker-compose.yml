@@ -11,15 +11,15 @@ services:
     ports:
       - '80:80'
     links: # Link services to access http://app and  http://api inside the container
-      - api:api
-      - app:app
+      - sagui-api:sagui-api
+      - sagui-app:sagui-app
     depends_on:
-      - "api"
+      - "sagui-api"
 
   #############
   ## vuejs spa
   #############
-  app:
+  sagui-app:
     build:
       context: ./sagui-app
       dockerfile: Dockerfile.dev
@@ -37,7 +37,7 @@ services:
   #############
   ## flask api
   #############
-  api:
+  sagui-api:
     build:
       context: ./sagui-api
       dockerfile: Dockerfile.dev
