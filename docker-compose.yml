@@ -8,6 +8,7 @@ services:
       context: ./nginx
       dockerfile: Dockerfile.dev
     image: sagui-nginx
+    restart: always
     ports:
       - '80:80'
     links: # Link services to access http://app and  http://api inside the container
@@ -24,6 +25,7 @@ services:
       context: ./sagui-app
       dockerfile: Dockerfile.dev
     image: sagui-app
+    restart: always
     #environment:
       #- NODE_ENV=development
     volumes: # For webpack dev server to use our local files
@@ -42,36 +44,50 @@ services:
       context: ./sagui-api
       dockerfile: Dockerfile.dev
     image: sagui-api
+    restart: always
     command: "flask run --host=0.0.0.0"
     environment:
       - FLASK_APP=app.py
       - FLASK_ENV=development
       - DB_NAME=sagui
-      - DB_USER=sagui
-      - DB_PASSWORD=sagui
-      - DB_HOST="db"
+      - DB_USER=root
+      - DB_PASSWORD=example
+      - DB_HOST="mongo"
       - DB_PORT=27017
       #- NODE_ENV=development
     links:
-      - db:db
+      - mongo:mongo
     volumes:
       - ./sagui-api:/app
     ports:
       - '5000'
     depends_on:
-      - "db"
+      - "mongo"
 
   #############
   ## mongo
   #############
-  db: # name of the third service
-    image: mongo # specify image to build container from
-    volumes:
-    - mongo:/data/db
+  mongo:
+    image: mongo:4.0.12-xenial
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  ###################
+  ## mongo web admin
+  ###################
+  mongo-express:
+    image: mongo-express:0.49
+    restart: always
     ports:
-    - "27017:27017" # specify port forwarding
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: example
+
 #############
 ## mongo fix
 #############
-volumes:
-  mongo:
+# volumes:
+#   mongo:
