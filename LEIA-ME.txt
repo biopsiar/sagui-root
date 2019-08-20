@@ -1,0 +1,3 @@
+Este diretório possui a documentação da aplicação em formato markdown (README.md).
+
+Por favor, acesse https://github.com/biopsiar/sagui-root para ver a documentação diagramada e completa.
