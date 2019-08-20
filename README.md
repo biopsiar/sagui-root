@@ -31,7 +31,7 @@ Link para a apresentação: https://docs.google.com/presentation/d/1Q7mBeFb6CITV
 Link para o audio da apresentação: https://drive.google.com/open?id=1EzkFaA1kts_AqmTZ_4X-6Xr7cYSKQMKD
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/biopsiar/sagui-root/master/sample.gif" alt="Logo" height="100%">
+  <img src="https://i.imgur.com/UBaDPhN.gif" alt="sample" height="100%">
 </p>
 
 # ⚙ Instalação:
