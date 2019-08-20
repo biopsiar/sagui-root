@@ -1,0 +1,38 @@
+[
+  {
+    "_id": { "$oid": "5d571235ddff1b00064b0349" },
+    "title": "Computador DELL",
+    "price": "5000,00",
+    "img": "https://cdn.desapega.net/thumbs/compre-um-computador-de-ultima-geracao-pelo-o-menor-preco-do-mercado_640x480_001_581712b4e9808.jpg",
+    "unity": 1,
+    "unity_type": "Unidade",
+    "description": "Computador para atender demanda da secretaria."
+  },
+  {
+    "_id": { "$oid": "5d571248ddff1b00064b034a" },
+    "title": "Tinta para pincel atômico",
+    "price": "33,00",
+    "img": "https://a-static.mlcdn.com.br/618x463/tinta-reabastecedor-pincel-atomico-20ml-azul-12un-compactor/atacadosaopaulo/eee75242a3b87751a71bfb6ebce5cad0/f7c109716552a2c3a08b1728f9d6d5b9.jpg",
+    "unity": 12,
+    "unity_type": "Unidade",
+    "description": "Mínimo 20ml. vermelha, preta ou azul."
+  },
+  {
+    "_id": { "$oid": "5d57124eddff1b00064b034b" },
+    "title": "Manutenção de ônibus",
+    "price": "100,00",
+    "img": "https://www.3ppublicidade.com.br/imagens/informacoes/adesivacao-veiculos-preco-06.jpg",
+    "unity": 1,
+    "unity_type": "Unidade",
+    "description": "Serviços mecânicos para manutenção preventiva."
+  },
+  {
+    "_id": { "$oid": "5d571257ddff1b00064b034c" },
+    "title": "Saco plástico para lixo",
+    "price": "12,00",
+    "img": "http://www.visuartembalagens.com.br/imagens/informacoes/saco-autoclave-preco-01.jpg",
+    "unity": 1,
+    "unity_type": "100",
+    "description": "Capacidade 100 litros. Saco reforçado de polietileno. Embalagem com 100 sacos."
+  }
+]

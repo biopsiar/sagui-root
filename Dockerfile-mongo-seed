@@ -1,0 +1,5 @@
+FROM mongo:4.0.12-xenial
+
+COPY mock_data.json /mock_data.json
+
+CMD mongoimport --uri "mongodb://root:example@mongo/sagui?authSource=admin" --collection items --type json --file /mock_data.json --jsonArray
