@@ -12,17 +12,19 @@
     <br />
     <h2 align="center">
         <a href="https://biopsiar.github.io/"> Demo <strong>mockup</strong></a>
+        Atenção: a versão mockup não é totalmente funcional
     </h2>
     <br />
   </p>
 </p>
 
 # ⚠ Aviso
-**Certifique-se que essa é a versão mais recente da documentação**
+**Certifique-se que essa é a versão mais recente da documentação**  
+  
 Você pode encontrar a documentação atualizada em: https://github.com/biopsiar/sagui-root
 
 # ℹ Intro
-
+O SAGUI é uma Progressive Web App cuja interação baseia-se no mecanismo de deslizar cartões (swiping app). Nossa stack é composta por Mongo + Flask no back-end para fornecer uma API RESTful e Vue.js + Tailwind.css no front-end para permitir a experiência fluida de uma Single Page Application. O levantamento da aplicação é orquestrado através de uma arquitetura de microserviços com Docker + Docker Compose. Nginx gerencia operações de proxy e Gunicorn fornece o serviço HTTP da API.
 
 # ⚙ Instalação:
 0. **Antes de prosseguir, certifique-se de que possui o Docker e Docker Compose instalados:**
