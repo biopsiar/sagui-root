@@ -1,5 +1,30 @@
-# Instalação
-# <img src="https://avatars0.githubusercontent.com/u/5429470?s=200&v=4" height="38"/> Project setup:
+<br />
+<p align="center">
+  <a href="https://github.com/biopsiar/sagui-root">
+    <img src="https://raw.githubusercontent.com/biopsiar/biopsiar.github.io/master/img/icons/android-chrome-192x192.png" alt="Logo" width="160">
+  </a>
+    <br />
+    <h3 align="center">
+        <strong>SAGUI</strong>
+    </h3>
+  <p align="center">
+    <strong>S</strong>istema de <strong>A</strong>valiação de <strong>G</strong>astos P<strong>ú</strong>bl<strong>i</strong>cos
+    <br />
+    <h2 align="center">
+        <a href="https://biopsiar.github.io/"> Demo <strong>mockup</strong></a>
+    </h2>
+    <br />
+  </p>
+</p>
+
+# Aviso
+**Certifique-se que essa é a versão mais recente da documentação**
+Você pode encontrar a documentação atualizada em: https://github.com/biopsiar/sagui-root
+
+# Intro
+
+
+# <img src="https://avatars0.githubusercontent.com/u/5429470?s=200&v=4" height="38"/> Instalação:
 0. **Antes de prosseguir, certifique-se de que possui o Docker e Docker Compose instalados:**
 
     * https://docs.docker.com/compose/install/
@@ -36,7 +61,7 @@
 
 # Para desenvolvimento
 
-1. **Abra o terminal na raíz do projeto (sagui-root) e rode o comando:**
+1. **Abra o terminal na raiz do projeto (sagui-root) e rode o comando:**
     ```
     maratonista@hackfest:~/sagui-root$ docker-compose up -d
     ```
@@ -45,7 +70,7 @@
 
 # Para produção
 
-1. **Abra o terminal na raíz do projeto (sagui-root) e rode o comando:**
+1. **Abra o terminal na raiz do projeto (sagui-root) e rode o comando:**
     ```
     maratonista@hackfest:~/sagui-root$ docker-compose -f docker-compose.prod.yml up -d
     ```
