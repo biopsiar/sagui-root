@@ -37,8 +37,6 @@ services:
       - DB_PORT=27017
     links:
       - mongo:mongo
-    volumes:
-      - ./sagui-api:/app
     ports:
       - '5000'
     depends_on:
