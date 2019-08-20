@@ -12,8 +12,10 @@
     <br />
     <h2 align="center">
         <a href="https://biopsiar.github.io/"> Demo <strong>mockup</strong></a>
-        Atenção: a versão mockup não é totalmente funcional
     </h2>
+    <h3 align="center">
+        Atenção: a versão mockup não é totalmente funcional por limitações de hospedagem do github
+    </h3>
     <br />
   </p>
 </p>
