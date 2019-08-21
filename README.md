@@ -27,6 +27,7 @@ Você pode encontrar a documentação atualizada em: https://github.com/biopsiar
 
 # ℹ Intro
 O SAGUI é uma Progressive Web App cuja interação baseia-se no mecanismo de deslizar cartões (swiping app). Nossa stack é composta por Mongo + Flask no back-end para fornecer uma API RESTful e Vue.js + Tailwind.css no front-end para permitir a experiência fluida de uma Single Page Application. O levantamento da aplicação é orquestrado através de uma arquitetura de microserviços com Docker + Docker Compose. Nginx gerencia operações de proxy e Gunicorn fornece o serviço HTTP da API. Todos os outros códigos desenvolvidos durante a competição, incluindo validação estatística, podem ser encontrados na página do time: https://github.com/biopsiar 
+  
 Link para a apresentação: https://docs.google.com/presentation/d/1Q7mBeFb6CITVSIfqi0otJNkjh6n6wRqtfobRBS0d9-Q/edit?usp=sharing  
 Link para o audio da apresentação: https://drive.google.com/open?id=1EzkFaA1kts_AqmTZ_4X-6Xr7cYSKQMKD
 
@@ -73,6 +74,7 @@ Link para o audio da apresentação: https://drive.google.com/open?id=1EzkFaA1kt
 
 1. **Abra o terminal na raiz do projeto (sagui-root) e rode o comando:**
     ```
+    maratonista@hackfest:~/sagui-root$ docker-compose build
     maratonista@hackfest:~/sagui-root$ docker-compose up -d
     ```
     Esse procedimento levantará os containers e configurações necessárias para rodar a aplicação em modo de *desenvolvimento*. Ou seja, funcionalidades como hot reloading estarão ativas. Você poderá acessar a aplicação no endereço `localhost`. Detalhes das configurações podem ser encontrados no arquivo `docker-compose.yml`.
@@ -82,6 +84,7 @@ Link para o audio da apresentação: https://drive.google.com/open?id=1EzkFaA1kt
 
 1. **Abra o terminal na raiz do projeto (sagui-root) e rode o comando:**
     ```
+    maratonista@hackfest:~/sagui-root$ docker-compose -f docker-compose.prod.yml build
     maratonista@hackfest:~/sagui-root$ docker-compose -f docker-compose.prod.yml up -d
     ```
     Esse procedimento levantará os containers e configurações necessárias para rodar a aplicação em modo de *produção*. Qualquer alteração feita nos arquivos da aplicação nesse modo só propagará ao reiniciar os serviços. Você poderá acessar a aplicação no endereço `localhost`. Detalhes das configurações podem ser encontrados no arquivo `docker-compose.prod.yml`.
